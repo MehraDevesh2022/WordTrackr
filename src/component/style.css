@@ -1,0 +1,67 @@
+html, body {
+    background: black;
+    color: #00b800;
+    margin:0;
+    padding: 0;
+    padding-top: 10px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+body {
+    font-weight: 400;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    background: hsl(349, 100%, 33%);
+    background: #00b800;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    width: 10rem;
+    font-size: large;
+    height: 3rem;
+}
+
+h1 {
+    font-size: 25px;
+    text-align:center;
+}
+
+textarea {
+    font-family: 'Press Start 2P', cursive;
+    border: 3px solid black;
+    width: 90%;
+    margin: 0 auto;
+    outline: none;
+    height: 200px;
+    background: #07b807;
+    padding: 10px;
+    font-size: 20px;
+   
+}
+button:hover{
+    box-shadow: 0px 1px 2px 0px hsla(126, 95%, 24%, 0.941),
+            1px 2px 4px 0px hsl(115, 97%, 15%),
+            2px 4px 8px 0px hsla(134, 95%, 16%, 0.665),
+            2px 4px 16px 0px hsl(110, 97%, 30%);
+            cursor: pointer;
+
+}
+button:disabled{
+    cursor: not-allowed;
+    background-color: darkred;
+    color: red;
+     box-shadow: 0px 1px 2px 0px hsla(347, 95%, 24%, 0.941),
+            1px 2px 4px 0px hsl(355, 97%, 15%),
+            2px 4px 8px 0px hsla(347, 95%, 16%, 0.952),
+            2px 4px 16px 0px hsl(347, 96%, 46%);
+}
+textarea:disabled{
+    background-color: rgba(6, 190, 6, 0.936);
+    color: red;
+}
+
