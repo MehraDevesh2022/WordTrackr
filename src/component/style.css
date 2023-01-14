@@ -38,7 +38,8 @@ textarea {
     margin: 0 auto;
     outline: none;
     height: 200px;
-    background: #07b807;
+    /* background: #07b807; */
+    background-color: whitesmoke;
     padding: 10px;
     font-size: 20px;
    
@@ -54,7 +55,7 @@ button:hover{
 button:disabled{
     cursor: not-allowed;
     background-color: darkred;
-    color: red;
+    color: rgba(233, 3, 3, 0.937);
      box-shadow: 0px 1px 2px 0px hsla(347, 95%, 24%, 0.941),
             1px 2px 4px 0px hsl(355, 97%, 15%),
             2px 4px 8px 0px hsla(347, 95%, 16%, 0.952),
@@ -62,6 +63,6 @@ button:disabled{
 }
 textarea:disabled{
     background-color: rgba(6, 190, 6, 0.936);
-    color: red;
+   color: rgb(0, 0, 0);
 }
 

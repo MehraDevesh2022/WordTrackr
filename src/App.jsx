@@ -1,11 +1,12 @@
 import React from "react";
 import "./component/style.css";
 function App() {
-  const START_TIME = 5;
+  const START_TIME = 20;
   const [text, setText] = React.useState("");
   const [count, setCount] = React.useState(0);
   const [timeRemaining, setTimeRemaining] = React.useState(START_TIME);
   const [isStart, setIsStart] = React.useState(false);
+  const linkRef = React.useRef(null);
 
   React.useEffect(() => {
     if (timeRemaining > 0 && isStart)
@@ -15,11 +16,27 @@ function App() {
       
     }
    else if(timeRemaining ===0){
-       wordCounter(text);
-       setIsStart(false);
+        endTheClock();
       }
    
   }, [timeRemaining ,isStart]);
+
+
+
+
+   function endTheClock(){
+      wordCounter(text);
+      setIsStart(false);
+   }
+
+
+   function startClock() {
+     setIsStart(true);
+     setTimeRemaining(START_TIME);
+     setText("");
+     linkRef.current.disabled = false
+     linkRef.current.focus();
+   }
 
   function handleChange(e) {
     const { value } = e.target;
@@ -34,29 +51,26 @@ function App() {
     setCount(countWord);
   }
 
-  function handleClock(){
-    setIsStart(true);
-    setTimeRemaining(START_TIME);
-  }
+  
   return (
     <>
-      <h1>How fast do you type?</h1>
+      <h1>How fast do you type ?</h1>
       <textarea
         value={text}
         onChange={handleChange}
         // until is isstart is true you can textArea enable typing else disable
         disabled={!isStart}
-      
+        ref={linkRef}
       />
-      <h4>Time reminaing: {timeRemaining}</h4>
+      <h4>Time Remaining : {timeRemaining}</h4>
       <button
-        onClick={handleClock}
+        onClick={startClock}
         // disabled is property from html while condtion is true then button not working that time
         disabled={isStart}
       >
         Start Game
       </button>
-      <h1>Word-Count : {count}</h1>
+      <h1>Word Count : {count}</h1>
     </>
   );
 }
