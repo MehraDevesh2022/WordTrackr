@@ -2,9 +2,9 @@
 
 > "Counting words to shape your thoughts."
 
- <img src="./img/01.png" width="100%" height="100%">
+ <img src="./img/01.png" width="700" height="100%">
 
-<img src="./img/02.png" width="100%" height="100%">
+<img src="./img/02.png" width="700" height="100%">
 
 
 
