@@ -6,16 +6,14 @@
 
 <img src="./img/02.png" width="100%" height="100%">
 
-## Demo
 
-Check out the demo of WordTrackr in action: [Demo Link]
 
 ## Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/WordTrackr.git
+   git clone https://github.com/MehraDevesh2022/WordTrackr.git
    cd WordTrackr
  
     ```
