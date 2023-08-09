@@ -18,7 +18,7 @@ function App() {
    else if(timeRemaining ===0){
         endTheClock();
       }
-   
+   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeRemaining ,isStart]);
 
 
